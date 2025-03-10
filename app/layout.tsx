@@ -10,6 +10,22 @@ const exo = Exo_2({
 export const metadata: Metadata = {
   title: "Cobalt",
   description: "Free QOL.",
+  themeColor: "#172554", 
+
+  openGraph: {
+    title: "Cobalt",
+    description: "Free QOL.",
+    type: "website",
+    url: "https://cobaltqol.github.io",
+    images: [
+      {
+        url: "/logo.png", 
+        width: 500,
+        height: 500,
+        alt: "Cobalt Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
