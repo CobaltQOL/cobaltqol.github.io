@@ -8,7 +8,7 @@ const exo = Exo_2({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#172554",
+  themeColor: "#2C75D5",
   width: "device-width",
   initialScale: 1,
 };
@@ -16,6 +16,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Cobalt",
   description: "Free QOL.",
+  openGraph: {
+    title: "Cobalt",
+    description: "Free QOL.",
+    url: "https://cobaltqol.github.io",
+    images: [
+      {
+        url: "https://cobaltqol.github.io/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Cobalt Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${exo.variable} ${exo.variable} antialiased`}
-      >
+      <body className={`${exo.variable} ${exo.variable} antialiased`}>
         {children}
       </body>
     </html>
