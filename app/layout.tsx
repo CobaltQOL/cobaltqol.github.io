@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 
@@ -7,25 +7,15 @@ const exo = Exo_2({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#2C75D5",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Cobalt",
   description: "Free QOL.",
-  themeColor: "#172554", 
-
-  openGraph: {
-    title: "Cobalt",
-    description: "Free QOL.",
-    type: "website",
-    url: "https://cobaltqol.github.io",
-    images: [
-      {
-        url: "/logo.png", 
-        width: 500,
-        height: 500,
-        alt: "Cobalt Logo",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
