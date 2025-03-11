@@ -8,7 +8,7 @@ const exo = Exo_2({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#2C75D5",
+  themeColor: "#172554",
   width: "device-width",
   initialScale: 1,
 };
