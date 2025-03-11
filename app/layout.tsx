@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://cobaltqol.github.io/logo.png",
-        width: 800,
-        height: 600,
+        width: 50,
+        height: 50,
         alt: "Cobalt Logo",
       },
     ],

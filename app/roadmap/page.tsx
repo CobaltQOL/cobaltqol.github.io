@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaDiscord, FaGithub, FaHome } from "react-icons/fa";
+import { FaDiscord, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,16 +112,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center min-h-screen select-none font-[family-name:var(--font-exo)]">
-        <h1 className="text-3xl font-normal text-white mb-3">C O B A L T</h1>
-        <p className="text-sm text-gray-500 mb-5">The next generation of QOL scripts</p>
-        <div className="flex space-x-4">
-          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="#">
-            Download
-          </a>
-          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="#">
-            Discord
-          </a>
-        </div>
+        <h1 className="text-3xl font-normal text-white mb-3">Road Map</h1>
       </div>
     </div>
   );
