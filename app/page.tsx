@@ -3,7 +3,7 @@ import { FaDiscord, FaGithub } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <nav className="fixed left-1/2 transform -translate-x-1/2 w-[70%] p-3.5 bg-slate-800 border-1 border-solid border-slate-900 border-opacity-25 rounded-xl flex justify-between items-center mt-4 z-10">
+      <nav className="fixed left-1/2 transform -translate-x-1/2 w-[70%] p-3.5 bg-slate-800/40 border-1 border-solid border-slate-900/25 rounded-xl flex justify-between items-center mt-4 z-10">
         <h1 className="text-1xl font-light text-white-200">C O B A L T</h1>
         <div className="flex space-x-4">
           <a
