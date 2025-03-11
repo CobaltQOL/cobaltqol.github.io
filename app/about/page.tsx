@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 
 export default function Home() {
@@ -13,9 +14,9 @@ export default function Home() {
     <div>
       <div className="fixed left-1/2 transform -translate-x-1/2 w-[90%] flex justify-center mt-4 z-30">
         <nav className="w-full p-3.5 bg-slate-800/40 border border-slate-900/25 rounded-full flex justify-between items-center">
-          <a className="text-sm ml-3 sm:ml-5 font-normal text-white" href="/">
+          <Link className="text-sm ml-3 sm:ml-5 font-normal text-white" href="/">
             C O B A L T
-          </a>
+          </Link>
 
           <button 
             className={`md:hidden text-zinc-300 hover:text-white transition duration-300 mr-3 z-40 ${
@@ -32,24 +33,26 @@ export default function Home() {
           </button>
 
           <div className="hidden md:flex space-x-4 mr-3 sm:mr-5">         
-            <a
+            <Link
               href="/roadmap"
               className="text-zinc-300 hover:text-white transition duration-300"
               aria-label="Roadmap"
             >
               Road Map
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="text-zinc-300 hover:text-white transition duration-300 mr-5"
               aria-label="About Us"
             >
               About Us
-            </a>
+            </Link>
             <a
               href="https://discord.gg/cobaltqol"
               className="text-zinc-300 hover:text-white transition duration-300"
               aria-label="Discord"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaDiscord size={24} />
             </a>
@@ -57,6 +60,8 @@ export default function Home() {
               href="https://github.com/CobaltQOL"
               className="text-zinc-300 hover:text-white transition duration-300"
               aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub size={24} />
             </a>
@@ -92,19 +97,31 @@ export default function Home() {
           </button>
 
           <div className="flex flex-col items-center space-y-2.5 mt-6">
-            <a href="/" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
+            <Link href="/" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
               Home
-            </a>
-            <a href="/roadmap" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
+            </Link>
+            <Link href="/roadmap" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
               Road Map
-            </a>
-            <a href="/about" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
+            </Link>
+            <Link href="/about" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
               About Us
-            </a>
-            <a href="https://discord.gg/cobaltqol" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
+            </Link>
+            <a
+              href="https://discord.gg/cobaltqol"
+              className="text-zinc-300 hover:text-white transition duration-300 text-lg"
+              onClick={closeMenu}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Discord
             </a>
-            <a href="https://github.com/CobaltQOL" className="text-zinc-300 hover:text-white transition duration-300 text-lg" onClick={closeMenu}>
+            <a
+              href="https://github.com/CobaltQOL"
+              className="text-zinc-300 hover:text-white transition duration-300 text-lg"
+              onClick={closeMenu}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
           </div>
