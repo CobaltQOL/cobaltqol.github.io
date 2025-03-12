@@ -40,22 +40,22 @@ export default function AboutUs() {
           <User
             name="Nathan"
             description="Mentally Unstable"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/1324116012240732172/b392359380aab7fda7630060c6be2e12.png"
           />
           <User
             name="Twiston"
             description="Quality shitcode"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/855798460593733652/79549714d67ed70ac29c71fb258d9f29.png"
           />
           <User
             name="Night"
             description="Can barely play skyblock"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/452076196419600394/004771eef61f8884ecfb09a40636e0ba.png"
           />
           <User
             name="Nima"
             description="Long live Germany!"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/697415764306821141/5b26ed78e66734e98ec070c95b3e7762.png"
           />
         </div>
 
@@ -66,14 +66,18 @@ export default function AboutUs() {
           <User
             name="Funzies"
             description="Professional bullshitter"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/1176527774597521448/7260300494e8c870933a4a6cbf019ab0.png"
           />
           <User
             name="Kobe"
             description="Helped with original website"
-            image="/logo.png"
+            image="https://cdn.discordapp.com/avatars/1187752214429712508/c56ede65ab9588869a61b94374f4536a.png"
           />
-          <User name="Flow" description="Best critiques!" image="/logo.png" />
+          <User 
+            name="Flow" 
+            description="Best critiques!" 
+            image="https://cdn.discordapp.com/avatars/1300063261609295932/28a2a45a6e3c2086568b41f72e5449b7.png" 
+          />
         </div>
       </div>
     </div>
