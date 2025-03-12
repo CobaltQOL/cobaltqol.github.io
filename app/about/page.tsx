@@ -16,7 +16,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div>
+    <div className="relative min-h-screen">
       <div className="fixed left-1/2 transform -translate-x-1/2 w-[90%] flex justify-center mt-4 z-30">
         <Navbar />
       </div>
@@ -24,7 +24,7 @@ export default function AboutUs() {
       <div
         className={`transition-opacity duration-500 ease-in-out ${
           isVisible ? "opacity-100" : "opacity-0"
-        } flex flex-col items-center justify-center min-h-screen select-none font-[family-name:var(--font-exo)]`}
+        } flex flex-col items-center justify-start pt-20 overflow-y-auto`}
       >
         <h1 className="text-3xl font-normal text-white mb-3">About Us</h1>
         <p className="text-sm text-gray-500 mb-5 w-[400px] text-center">
@@ -33,7 +33,7 @@ export default function AboutUs() {
           back to the community.
         </p>
 
-        <div className="w-[70%] h-px bg-gray-400 opacity-50 my-5"></div>
+        <div className="w-[70%] mt-2 mb-4 h-px bg-gray-400 opacity-50"></div>
 
         <h1 className="text-3xl font-normal text-white mb-3">Developers</h1>
         <div className="flex flex-wrap justify-center gap-4">
@@ -58,23 +58,23 @@ export default function AboutUs() {
             image="/logo.png"
           />
         </div>
-      </div>
 
-      <div className="w-[70%] h-px bg-gray-400 opacity-50 my-5"></div>
+        <div className="w-[70%] mt-6 mb-4 h-px bg-gray-400 opacity-50"></div>
 
-      <h1 className="text-3xl font-normal text-white mb-3">Contributors</h1>
-      <div className="flex flex-wrap justify-center gap-4">
-        <User
-          name="Funzies"
-          description="Professional bullshitter"
-          image="/logo.png"
-        />
-        <User
-          name="Kobe"
-          description="Helped with original website"
-          image="/logo.png"
-        />
-        <User name="Flow" description="Best critiques!" image="/logo.png" />
+        <h1 className="text-3xl font-normal text-white mb-3">Contributors</h1>
+        <div className="flex flex-wrap justify-center gap-4">
+          <User
+            name="Funzies"
+            description="Professional bullshitter"
+            image="/logo.png"
+          />
+          <User
+            name="Kobe"
+            description="Helped with original website"
+            image="/logo.png"
+          />
+          <User name="Flow" description="Best critiques!" image="/logo.png" />
+        </div>
       </div>
     </div>
   );
