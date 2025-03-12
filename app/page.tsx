@@ -51,22 +51,15 @@ export default function Home() {
             </div>
 
             <button
-              className="md:hidden text-zinc-300 hover:text-white transition duration-300 mr-3"
+              className="md:hidden text-zinc-300 hover:text-white transition duration-300 mr-3 relative h-6 w-6"
               onClick={toggleMenu}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMenuOpen ? (
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M6 6L18 18" className="stroke-current" strokeWidth="2" />
-                  <path d="M18 6L6 18" className="stroke-current" strokeWidth="2" />
-                </svg>
-              ) : (
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M2 6h20" className="stroke-current" strokeWidth="2" />
-                  <path d="M2 12h20" className="stroke-current" strokeWidth="2" />
-                  <path d="M2 18h20" className="stroke-current" strokeWidth="2" />
-                </svg>
-              )}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+                <span className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${isMenuOpen ? 'rotate-45' : '-translate-y-1.5'}`} />
+                <span className={`block absolute h-[2px] w-full bg-current transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+                <span className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${isMenuOpen ? '-rotate-45' : 'translate-y-1.5'}`} />
+              </div>
             </button>
           </div>
 
@@ -81,21 +74,21 @@ export default function Home() {
             <div className="flex flex-col p-4 space-y-4">
               <Link
                 href="/roadmap"
-                className="text-zinc-300 hover:text-white transition duration-300 text-center"
+                className="text-zinc-300 hover:text-white transition duration-300 text-left w-full pl-[20%]"
                 onClick={closeMenu}
               >
                 Road Map
               </Link>
               <Link
                 href="/about"
-                className="text-zinc-300 hover:text-white transition duration-300 text-center"
+                className="text-zinc-300 hover:text-white transition duration-300 text-left w-full pl-[20%]"
                 onClick={closeMenu}
               >
                 About Us
               </Link>
               <a
                 href="https://discord.gg/cobaltqol"
-                className="text-zinc-300 hover:text-white transition duration-300 text-center"
+                className="text-zinc-300 hover:text-white transition duration-300 text-left w-full pl-[20%]"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
@@ -104,7 +97,7 @@ export default function Home() {
               </a>
               <a
                 href="https://github.com/CobaltQOL"
-                className="text-zinc-300 hover:text-white transition duration-300 text-center"
+                className="text-zinc-300 hover:text-white transition duration-300 text-left w-full pl-[20%]"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
