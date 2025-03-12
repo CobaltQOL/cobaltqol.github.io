@@ -24,7 +24,7 @@ export default function AboutUs() {
       <div
         className={`transition-opacity duration-500 ease-in-out ${
           isVisible ? "opacity-100" : "opacity-0"
-        } flex flex-col items-center justify-start pt-20 overflow-y-auto`}
+        } flex flex-col items-center justify-start pt-20 pb-5 overflow-y-auto`}
       >
         <h1 className="text-3xl font-normal text-white mb-3">About Us</h1>
         <p className="text-sm text-gray-500 mb-5 w-[400px] text-center">
@@ -73,10 +73,10 @@ export default function AboutUs() {
             description="Helped with original website"
             image="https://cdn.discordapp.com/avatars/1187752214429712508/c56ede65ab9588869a61b94374f4536a.png"
           />
-          <User 
-            name="Flow" 
-            description="Best critiques!" 
-            image="https://cdn.discordapp.com/avatars/1300063261609295932/28a2a45a6e3c2086568b41f72e5449b7.png" 
+          <User
+            name="Flow"
+            description="Best critiques!"
+            image="https://cdn.discordapp.com/avatars/1300063261609295932/28a2a45a6e3c2086568b41f72e5449b7.png"
           />
         </div>
       </div>
