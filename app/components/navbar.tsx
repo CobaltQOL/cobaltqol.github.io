@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full p-3.5 bg-slate-800/40 border border-slate-900/25 rounded-full flex justify-between items-center relative">
-      <Link className="text-sm ml-3 sm:ml-5 font-normal text-white" href="/">
+      <Link className="text-sm ml-3 sm:ml-5 font-medium text-white" href="/">
         C O B A L T
       </Link>
 
