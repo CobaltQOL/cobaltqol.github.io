@@ -27,8 +27,8 @@ export default function AboutUs() {
         } flex flex-col items-center justify-start pt-20 pb-5 overflow-y-auto`}
       >
         <h1 className="text-3xl font-normal text-white mb-3">About Us</h1>
-        <p className="text-sm text-gray-500 mb-5 w-[400px] text-center">
-          We believe everyone should have access to free QOL scripts. Open source is an incredible concept that we deeply admire and support. We are passionate about giving back to the community and contributing to this amazing movement.
+        <p className="text-sm md:text-base text-gray-500 mb-5 w-full px-4 md:w-[400px] md:px-0 text-center">
+          We believe everyone should have access to free QOL scripts. Open source is an incredible concept that we deeply admire and support. We are passionate about giving back to the community.
         </p>
 
         <div className="w-[70%] mt-2 mb-4 h-px bg-gray-400 opacity-50"></div>
