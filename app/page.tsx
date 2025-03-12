@@ -14,7 +14,11 @@ export default function Home() {
   return (
     <div>
       <div className="fixed left-1/2 transform -translate-x-1/2 w-[90%] flex justify-center mt-4 z-30">
-        <nav className="w-full p-3.5 bg-slate-800/40 border border-slate-900/25 rounded-full flex justify-between items-center relative">
+        <nav
+          className={`w-full p-3.5 bg-slate-800/40 border border-slate-900/25 rounded-full flex justify-between items-center relative transition-all duration-300 ${
+            isMenuOpen ? "rounded-b-none" : "rounded-full"
+          }`}
+        >
           <Link
             className="text-sm ml-3 sm:ml-5 font-normal text-white"
             href="/"
@@ -45,24 +49,36 @@ export default function Home() {
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
                 <span
-                  className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${isMenuOpen ? "rotate-45" : "-translate-y-1.5"}`}
+                  className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${
+                    isMenuOpen ? "rotate-45" : "-translate-y-1.5"
+                  }`}
                 />
                 <span
-                  className={`block absolute h-[2px] w-full bg-current transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+                  className={`block absolute h-[2px] w-full bg-current transition-opacity duration-300 ${
+                    isMenuOpen ? "opacity-0" : ""
+                  }`}
                 />
                 <span
-                  className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${isMenuOpen ? "-rotate-45" : "translate-y-1.5"}`}
+                  className={`block absolute h-[2px] w-full bg-current transition-transform duration-300 ${
+                    isMenuOpen ? "-rotate-45" : "translate-y-1.5"
+                  }`}
                 />
               </div>
             </button>
           </div>
 
+          {/* Mobile Dropdown Menu */}
           <div
-            className={`absolute top-full right-0 mt-2 w-full md:hidden bg-slate-800/40 backdrop-blur-sm border border-slate-900/25 rounded-2xl shadow-xl transition-all duration-300 ${
+            className={`absolute top-full right-0 w-full md:hidden bg-slate-800/40 backdrop-blur-sm border border-slate-900/25 rounded-b-2xl shadow-xl transition-all duration-300 ${
               isMenuOpen
                 ? "opacity-100 visible translate-y-0"
                 : "opacity-0 invisible -translate-y-2"
+            } ${
+              isMenuOpen ? "border-t-0 rounded-t-none" : ""
             }`}
+            style={{
+              top: isMenuOpen ? "calc(100% + 8px)" : "100%",
+            }}
           >
             <div className="flex flex-col p-4 space-y-2">
               <Link
