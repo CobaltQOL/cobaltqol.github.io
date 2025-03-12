@@ -16,19 +16,6 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Cobalt",
   description: "Free QOL.",
-  openGraph: {
-    title: "Cobalt",
-    description: "Free QOL.",
-    url: "https://cobaltqol.github.io",
-    images: [
-      {
-        url: "https://cobaltqol.github.io/logo.png",
-        width: 50,
-        height: 50,
-        alt: "Cobalt Logo",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
