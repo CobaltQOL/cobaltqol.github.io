@@ -132,10 +132,10 @@ export default function Home() {
         <h1 className="text-3xl font-normal text-white mb-3">C O B A L T</h1>
         <p className="text-sm text-gray-500 mb-5">The next generation of QOL scripts</p>
         <div className="flex space-x-4">
-          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="#">
+          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             Download
           </a>
-          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="#">
+          <a className="px-8 py-3 bg-blue-950 font-light text-white rounded hover:bg-indigo-950 transition duration-300" href="https://discord.gg/cobaltqol">
             Discord
           </a>
         </div>
