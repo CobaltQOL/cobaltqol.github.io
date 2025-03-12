@@ -26,15 +26,35 @@ export default function Home() {
             <div className="hidden md:flex space-x-4 mr-3 sm:mr-5">
               <Link
                 href="/roadmap"
-                className="text-zinc-300 hover:text-white transition duration-300"
+                className="text-zinc-300 hover:text-white transition duration-300 flex items-center"
               >
-                Road Map
+                <FaMapLocationDot className="mr-2" />
+                Roadmap
               </Link>
               <Link
                 href="/about"
-                className="text-zinc-300 hover:text-white transition duration-300 mr-5"
+                className="text-zinc-300 hover:text-white transition duration-300 mr-5 flex items-center"
               >
+                <FaCircleUser className="mr-2" />
                 About Us
+              </Link>
+              <Link
+                href="https://discord.gg/cobaltqol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-300 hover:text-white transition duration-300 mr-5 flex items-center"
+              >
+                <FaDiscord className="mr-2" />
+                Discord
+              </Link>
+              <Link
+                href="https://github.com/CobaltQOL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-300 hover:text-white transition duration-300 mr-5 flex items-center"
+              >
+                <FaGithub className="mr-2" />
+                Github
               </Link>
             </div>
 
