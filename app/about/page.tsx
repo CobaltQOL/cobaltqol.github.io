@@ -42,7 +42,7 @@ export default function AboutUs() {
           />
           <User
             name="Twiston"
-            description="Quality shitcode"
+            description="Quality shitcode 🐸"
             image="https://cdn.discordapp.com/avatars/855798460593733652/79549714d67ed70ac29c71fb258d9f29.png"
           />
           <User
