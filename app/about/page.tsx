@@ -28,9 +28,7 @@ export default function AboutUs() {
       >
         <h1 className="text-3xl font-normal text-white mb-3">About Us</h1>
         <p className="text-sm text-gray-500 mb-5 w-[400px] text-center">
-          We agree that everyone should be able to use free QOL scripts. Open
-          source is an amazing thing that we all find amazing. And want to give
-          back to the community.
+          We believe everyone should have access to free QOL scripts. Open source is an incredible concept that we deeply admire and support. We are passionate about giving back to the community and contributing to this amazing movement.
         </p>
 
         <div className="w-[70%] mt-2 mb-4 h-px bg-gray-400 opacity-50"></div>
