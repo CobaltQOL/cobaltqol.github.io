@@ -14,6 +14,13 @@ export default function Roadmap() {
     return () => clearTimeout(timer);
   }, []);
 
+  const roadmapItems = [
+    { title: "Website", position: "left" },
+    { title: "Cheats", position: "right" },
+    { title: "Macros", position: "left" },
+    { title: "Discord Bot", position: "right" },
+  ];
+
   return (
     <div>
       <div className="fixed left-1/2 transform -translate-x-1/2 w-[90%] flex justify-center mt-4 z-30">
@@ -25,7 +32,52 @@ export default function Roadmap() {
           isVisible ? "opacity-100" : "opacity-0"
         } flex flex-col items-center justify-center min-h-screen select-none font-[family-name:var(--font-exo)]`}
       >
-        <h1 className="text-3xl font-normal text-white mb-3">Roadmap</h1>
+        <h1 className="text-3xl font-normal text-white mb-8">Roadmap</h1>
+        
+        <div className="relative h-96 w-full max-w-4xl">
+          <div className="absolute left-1/2 w-0.5 h-full bg-white/50 transform -translate-x-1/2" />
+
+          {roadmapItems.map((item, index) => {
+            const topPosition = 20 + index * 20; 
+            const isLeft = item.position === "left";
+
+            return (
+              <div
+                key={item.title}
+                className="absolute"
+                style={{
+                  top: `${topPosition}%`,
+                  [isLeft ? "right" : "left"]: "50%",
+                }}
+              >
+                <div className={`relative ${isLeft ? "mr-8" : "ml-8"}`}>
+                  <div
+                    className={`absolute top-1/2 w-8 h-px bg-white/50 ${
+                      isLeft ? "-right-8" : "-left-8"
+                    }`}
+                  />
+                  
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 transition-all">
+                    <h2 className="text-xl text-white font-medium">
+                      {item.title}
+                    </h2>
+                    <p className="text-white/70 mt-2 text-sm">
+                      Description for {item.title.toLowerCase()}
+                    </p>
+                    
+
+                    <div className="mt-3 h-1 bg-white/10 rounded-full">
+                      <div 
+                        className="h-full bg-green-400 rounded-full" 
+                        style={{ width: `${(index + 1) * 25}%` }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
