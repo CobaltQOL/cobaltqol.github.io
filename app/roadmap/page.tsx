@@ -56,35 +56,35 @@ export default function Roadmap() {
           isVisible ? "opacity-100" : "opacity-0"
         } flex flex-col items-center justify-center min-h-screen pt-[100px] pb-20 box-border px-4`}
       >
-        <h1 className="text-3xl font-normal text-white mb-5">Roadmap</h1>
+        <h1 className="text-3xl font-normal text-white mb-8">Roadmap</h1>
 
         <div className="relative w-full max-w-4xl">
-          {/* Central vertical line with reduced thickness */}
+          {/* Central vertical line */}
           <div className="absolute left-1/2 w-[2px] h-full bg-white/20 transform -translate-x-1/2" />
 
           {roadmapItems.map((item, index) => {
-            const topPosition = 20 + index * 20;
             const isLeft = item.position === "left";
+            const verticalPosition = 15 + index * 23;
 
             return (
               <div
                 key={item.title}
                 className="absolute"
                 style={{
-                  top: `${topPosition}%`,
+                  top: `${verticalPosition}%`,
                   [isLeft ? "right" : "left"]: "50%",
                 }}
               >
                 <div className={`relative ${isLeft ? "mr-4 md:mr-8" : "ml-4 md:ml-8"}`}>
-                  {/* Curved branch line using SVG */}
+                  {/* Curved SVG connector */}
                   <svg
-                    className={`absolute top-1/2 -translate-y-1/2 ${
-                      isLeft ? "right-[-2px]" : "left-[-2px]"
-                    } w-16 h-12 ${isLeft ? "-scale-x-100" : ""}`}
+                    className={`absolute top-1/2 -translate-y-1/2 w-16 h-12 ${
+                      isLeft ? "right-[calc(100%+2px)]" : "left-[calc(100%+2px)]"
+                    }`}
                     viewBox="0 0 100 50"
                   >
                     <path
-                      d="M2,25 Q50,25 98,25"
+                      d={isLeft ? "M98,25 Q50,25 2,25" : "M2,25 Q50,25 98,25"}
                       stroke="rgba(255,255,255,0.5)"
                       strokeWidth="2"
                       fill="none"
@@ -92,7 +92,7 @@ export default function Roadmap() {
                     />
                   </svg>
 
-                  {/* Content card with responsive margins */}
+                  {/* Content card */}
                   <div className="relative bg-slate-800/40 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 transition-all max-w-[280px] md:max-w-none mx-2">
                     <h2 className="text-xl text-white font-medium">
                       {item.title}
