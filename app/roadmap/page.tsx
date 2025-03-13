@@ -54,12 +54,13 @@ export default function Roadmap() {
       <div
         className={`transition-opacity duration-500 ease-in-out ${
           isVisible ? "opacity-100" : "opacity-0"
-        } flex flex-col items-center justify-center min-h-screen pt-[100px] pb-20 box-border`}
+        } flex flex-col items-center justify-center min-h-screen pt-[100px] pb-20 box-border px-4`}
       >
         <h1 className="text-3xl font-normal text-white mb-5">Roadmap</h1>
 
-        <div className="relative h-90 w-full max-w-4xl">
-          <div className="absolute left-1/2 w-0.5 h-full bg-white/50 transform -translate-x-1/2" />
+        <div className="relative w-full max-w-4xl">
+          {/* Central vertical line with reduced thickness */}
+          <div className="absolute left-1/2 w-[2px] h-full bg-white/20 transform -translate-x-1/2" />
 
           {roadmapItems.map((item, index) => {
             const topPosition = 20 + index * 20;
@@ -74,14 +75,25 @@ export default function Roadmap() {
                   [isLeft ? "right" : "left"]: "50%",
                 }}
               >
-                <div className={`relative ${isLeft ? "mr-8" : "ml-8"}`}>
-                  <div
-                    className={`absolute top-1/2 w-8 h-px bg-white/50 ${
-                      isLeft ? "-right-8" : "-left-8"
-                    }`}
-                  />
+                <div className={`relative ${isLeft ? "mr-4 md:mr-8" : "ml-4 md:ml-8"}`}>
+                  {/* Curved branch line using SVG */}
+                  <svg
+                    className={`absolute top-1/2 -translate-y-1/2 ${
+                      isLeft ? "right-[-2px]" : "left-[-2px]"
+                    } w-16 h-12 ${isLeft ? "-scale-x-100" : ""}`}
+                    viewBox="0 0 100 50"
+                  >
+                    <path
+                      d="M2,25 Q50,25 98,25"
+                      stroke="rgba(255,255,255,0.5)"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
 
-                  <div className="relative bg-slate-800/40 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 transition-all">
+                  {/* Content card with responsive margins */}
+                  <div className="relative bg-slate-800/40 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/15 transition-all max-w-[280px] md:max-w-none mx-2">
                     <h2 className="text-xl text-white font-medium">
                       {item.title}
                     </h2>
@@ -91,7 +103,7 @@ export default function Roadmap() {
 
                     <div className="mt-3 h-1 bg-white/10 rounded-full">
                       <div
-                        className="h-full bg-green-400 rounded-full"
+                        className="h-full bg-green-400 rounded-full transition-all duration-500"
                         style={{ width: `${item.progress}%` }}
                       />
                     </div>
