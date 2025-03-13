@@ -31,13 +31,13 @@ export default function Roadmap() {
       title: "Macros",
       description:
         "Skip the boring parts, and automate some parts of Hypixel Skyblock",
-      progress: 30,
+      progress: 5,
     },
     {
       title: "Discord Bot",
       description:
         "Discord bot for some utilities and embeds made across the server.",
-      progress: 10,
+      progress: 3,
     },
   ];
 
